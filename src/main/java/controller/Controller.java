@@ -29,7 +29,7 @@ public class Controller {
         Lotto winningLotto = new Lotto(winningNum);
         winningLotto.sortNumbers();
         int bonusNum = readAndValidateBonusNumber(winningLotto);
-        int[] result =LottoResultChecker.checkResult(hadLottos, winningLotto, bonusNum);
+        int[] result = LottoResultChecker.checkResult(hadLottos, winningLotto, bonusNum);
         outputView.printResult(result,purchasedPrice);
     }
 

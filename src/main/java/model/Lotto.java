@@ -68,7 +68,7 @@ public class Lotto {
         int pointerIndex = 0;
         int winningIndex = 0;
 
-        while (pointerIndex < myNumbers.size() && winningIndex < winningLotto.size()) {
+        while (pointerIndex < 6 && winningIndex < 6) {
             int myNum = myNumbers.get(pointerIndex);
             int winningNum = winningLotto.get(winningIndex);
 

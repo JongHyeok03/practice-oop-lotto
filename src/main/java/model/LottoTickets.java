@@ -13,10 +13,9 @@ public class LottoTickets {
         return tickets.size();
     }
     public String toString() {
-        for (Lotto lotto : tickets) {
-            System.out.println(lotto);
-        }
-        return null;
+        StringBuilder output = new StringBuilder();
+        for (Lotto ticket : tickets) output.append(ticket).append("\n");
+        return output.toString();
     }
 
     public List<Lotto> getLottos() {

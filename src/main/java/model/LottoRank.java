@@ -30,9 +30,7 @@ public enum LottoRank {
         return matchBonus;
     }
 
-    // ⭐ 일치 개수와 보너스 일치 여부로 등수를 찾아주는 메서드 (핵심 로직)
     public static LottoRank findRank(int matchCount, boolean matchBonus) {
-        // 모든 등수를 순회하며 조건에 맞는 등수를 찾습니다.
         for (LottoRank rank : values()) {
             if (rank.matchCount == matchCount) {
                 // 5개 일치일 경우, 보너스 번호 일치 여부로 2등과 3등을 구분합니다.
@@ -40,11 +38,11 @@ public enum LottoRank {
                     if (rank.isMatchBonus() == matchBonus) {
                         return rank;
                     }
-                    continue; // 5개 일치 조건이지만 보너스 여부가 다르면 다음 등수로 넘어갑니다.
+                    continue;
                 }
-                return rank; // 5개 외의 다른 등수는 바로 반환합니다.
+                return rank;
             }
         }
-        return MISS; // 일치하는 등수가 없으면 낙첨(MISS)을 반환합니다.
+        return MISS;
     }
 }

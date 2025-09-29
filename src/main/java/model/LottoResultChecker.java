@@ -11,7 +11,7 @@ public class LottoResultChecker {
 
         for (Lotto purchasedLotto : purchasedLottos) {
             int matchCount = purchasedLotto.countMatchingNumbers(winningLotto.getNumbers());
-            boolean isBonusMatch = purchasedLotto.countMatchingNumbers(bonusNum); // 1 또는 0 반환
+            boolean isBonusMatch = purchasedLotto.countMatchingNumbers(bonusNum);
 
             LottoRank rank = LottoRank.findRank(matchCount, isBonusMatch);
 
